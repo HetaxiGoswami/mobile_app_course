@@ -1,0 +1,23 @@
+@keyframes customAnimation {
+    0% {
+      transform: translate(var(--animation-custom_in-translate_x), var(--animation-custom_in-translate_y)) rotate(var(--animation-custom_in-rotate)) scale(var(--animation-custom_in-scale));
+      opacity: var(--animation-custom_in-opacity);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .animated-title {
+    will-change: transform, opacity;
+    animation-name: customAnimation;
+    animation-duration: 1500ms;
+    transform-origin: left center;
+    --animation-custom_in-translate_x: 0px;
+    --animation-custom_in-translate_y: -300px;
+    --animation-custom_in-opacity: 0;
+    --animation-custom_in-rotate: 0deg;
+    --animation-custom_in-scale: 1;
+  }
+  
